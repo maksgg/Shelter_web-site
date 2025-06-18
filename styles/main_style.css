@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap');
+:root {
+  --main-font: Georgia, serif;
+  --second-font: Arial, Helvetica, sans-serif;
+}
+:root {
+	--color-light-xl: #fff;
+	--color-light-l: #f6f6f6;
+	--color-light-s: #fafafa;
+	--color-dark-s: #cdcdcd;
+	--color-dark-m: #b2b2b2;
+	--color-dark-l: #545454;
+	--color-dark-xl: #4c4c4c;
+	--color-dark-2xl: #444;
+	--color-dark-3xl: #292929;
+	--color-primary: #f1cdb3;
+	--color-primary-light: #fddcc4;
+	--start-screen-gradient-background: #211f20;
+	--footer-gradient-background: #211f20;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+h1, h2, h3, h4, p, hr {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 1280px;
+  height: 120px;
+  margin: 0 auto;
+  background: linear-gradient(135deg,#5B483A, #262425,#211F20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-container {
+  width: 186px;
+  height: 60px;
+  margin-left: 40px;
+  gap: 10px;
+}
+.logo {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+.logo_title {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--color-light-xl);
+  margin-top: 10px;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 443px;
+  gap: 35px;
+  margin-right: 40px;
+}
+.nav-list > li {
+  height: 24px;
+}
+.nav-list > li > a {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-s);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.nav-list > li > hr {
+  height: 3px;
+  background: var(--color-primary);
+  border: var(--color-primary);
+}
+/* pets page header styles */
+.pets-header {
+  background: var(--color-light-xl);
+}
+.pets-logo {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.pets-logo-title {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--color-dark-3xl);
+}
+.pets-nav-links {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-l);
+  letter-spacing: 0.04em;
+}
