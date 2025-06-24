@@ -35,6 +35,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+figure {
+  margin: 0;
+}
 .btn {
 
 }
@@ -45,7 +48,7 @@ header {
   width: 1280px;
   height: 908px;
   margin: 0 auto;
-  background: linear-gradient(135deg,#5B483A, #262425,#211F20);
+  background: linear-gradient(135deg, #5B483A, #262425, #211F20);
 }
 main {
   width: 1280px;
@@ -56,6 +59,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-image: url("/images/noise_transparent.svg");
 }
 .logo-container {
   width: 186px;
@@ -75,7 +79,7 @@ main {
   font-family: var(--second-font);
   font-weight: 400;
   font-size: 13px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.11em;
   color: var(--color-light-xl);
   margin-top: 10px;
 }
@@ -94,7 +98,7 @@ main {
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 15px;
-  line-height: 160%;
+  line-height: 145%;
   color: var(--color-dark-s);
   letter-spacing: 0.04em;
   text-decoration: none;
@@ -141,20 +145,54 @@ main {
 /* hero section style */
 
 .hero {
- 
+  height: 818px;
+  padding-top: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-image: url("/images/noise_transparent.svg");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .hero-title-container {
-
+  width: 460px;
+  height: 322px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 80px;
 }
 .hero-heading {
-
+  width: 310px;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: var(--color-light-xl);
 }
 .hero-title {
-
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-s);
 }
 .hero-btn {
-
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 207px;
+  height: 52px;
+  background: var(--color-primary);
+  text-align: center;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  color: var(--color-dark-3xl);
 }
 .hero-img {
-
+  width: 698px;
+  height: 728px;
+  background-image: url("/images/start-screen-puppy.png");
 }
