@@ -1,7 +1,7 @@
 /* main styles */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap');
 :root {
-  --main-font: Georgia, serif;
+  --main-font: Georgia, sans-serif;
   --second-font: Arial, Helvetica, sans-serif;
 }
 :root {
@@ -31,15 +31,21 @@ body {
 h1, h2, h3, h4, p, hr {
   margin: 0;
 }
+.h3 {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 figure {
   margin: 0;
-}
-.btn {
-
 }
 
 /* header section */
@@ -177,7 +183,7 @@ main {
   line-height: 160%;
   color: var(--color-dark-s);
 }
-.hero-btn {
+.btn {
   border-radius: 100px;
   padding: 15px 45px;
   width: 207px;
@@ -195,4 +201,202 @@ main {
   width: 698px;
   height: 728px;
   background-image: url("/images/start-screen-puppy.png");
+}
+
+/* about section style */
+
+.about-container {
+  height: 588px;
+  background: var(--color-light-xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+.about-img {
+  width: 300px;
+  height: 408px;
+  margin-bottom: 20px;
+  background-image: url("/images/about-pets.png");
+}
+.about-content {
+  width: 430px;
+  height: 380px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.about-heading {
+  width: 370px;
+}
+.about-title {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-xl);
+}
+
+/* pets section style */
+
+.pets-container {
+  display: flex;
+  flex-direction: column;
+ /*  justify-content: space-around; */
+ padding-top: 80px;
+  gap: 60px;
+  height: 877px;
+  background: var(--color-light-l);
+}
+.pets-heading {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.slider-container {
+  display: flex;
+  justify-content: center;
+  gap: 53px;
+}
+.circle-btn {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 50%;
+  background: var(--color-light-l);
+  cursor: pointer;
+  align-self: center;
+}
+/* arrow line */
+.circle-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 7px);
+  width: 14px;
+  height: 2px;
+  background: #292929;
+  transform: translateY(-50%);
+}
+
+/* arrow triangle */
+.circle-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transform: translateY(-50%);
+}
+.left::before {
+  border-right: 5px solid #292929;
+  left: calc(55% - 14px);
+}
+.right::before {
+  border-left: 5px solid #292929;
+  left: calc(94% - 14px);
+}
+.card-container {
+  display: flex;
+  gap: 90px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 9px;
+  width: 270px;
+  height: 435px;
+  background: var(--color-light-s);
+}
+.card-img1 {
+  width: 270px;
+  height: 270px;
+  background-image: url("/images/pets-katrine.png");
+}
+.card-img2 {
+  width: 270px;
+  height: 270px;
+  background-image: url("/images/pets-jennifer.png");
+}
+.card-img3 {
+  width: 270px;
+  height: 270px;
+  background-image: url("/images/pets-woody.png");
+}
+.h4 {
+font-family: var(--main-font);
+font-weight: 400;
+font-size: 20px;
+letter-spacing: 0.06em;
+text-align: center;
+color: var(--color-dark-l);
+}
+.btn-light {
+  width: 187px;
+  height: 52px;
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-light-s);
+  border-radius: 100px;
+  padding: 15px 45px;
+  margin-bottom: 32px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.08em;
+  color: var(--color-dark-3xl); /* need to ad hover and pointer */
+}
+.pets-btn {
+  align-self: center;
+  width: 261px;
+}
+
+/* help section style */
+
+.help-container {
+  height: 611px;
+}
+.help-heading {
+  text-align: center;
+  padding-top: 80px;
+}
+.help-icons-container {
+  width: 1089px;
+  height: 281px;
+  padding-top: 60px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 120px;
+  row-gap: 55px;
+  
+}
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.icon {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+}
+.h4 {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark-l);
 }
