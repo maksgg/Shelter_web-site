@@ -28,7 +28,7 @@ body {
 *, *::before, *::after {
   box-sizing: inherit;
 }
-h1, h2, h3, h4, p, hr {
+h1, h2, h3, h4, h5, p, hr {
   margin: 0;
 }
 .h3 {
@@ -351,7 +351,7 @@ color: var(--color-dark-l);
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.08em;
-  color: var(--color-dark-3xl); /* need to ad hover and pointer */
+  color: var(--color-dark-3xl); /* need to add hover and pointer */
 }
 .pets-btn {
   align-self: center;
@@ -399,4 +399,54 @@ color: var(--color-dark-l);
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--color-dark-l);
+}
+.donation-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 90px;
+}
+.donation-img {
+  width: 505px;
+  height: 261px;
+  background-image: url("/images/donation-dog.png");
+}
+.donation-content {
+  width: 380px;
+  height: 282px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -10px;
+}
+.donation-h3 {
+}
+.h5 {
+  font-size: 15px;
+  line-height: 110%;
+  text-align: start;
+}
+.payment-container {
+  width: 349px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px 0;
+  border-radius: 9px;
+}
+.payment-icon {
+  width: 30px;
+  height: 23px;
+}
+.payment-number {
+
+}
+.donation-title {
+  font-family: var(--second-font);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--color-dark-m);
 }
