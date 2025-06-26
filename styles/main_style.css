@@ -47,6 +47,9 @@ ul {
 figure {
   margin: 0;
 }
+.btn, .footer-link {
+  text-decoration: none ;
+}
 
 /* header section */
 
@@ -70,8 +73,7 @@ main {
 .logo-container {
   width: 186px;
   height: 60px;
-  margin-left: 40px;
-  gap: 10px;
+  margin-left: 43px;
 }
 .logo {
   font-family: var(--main-font);
@@ -80,12 +82,13 @@ main {
   line-height: 110%;
   letter-spacing: 0.06em;
   color: var(--color-primary);
+  margin-left: -4px;
 }
 .logo_title {
   font-family: var(--second-font);
   font-weight: 400;
   font-size: 13px;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.1em;
   color: var(--color-light-xl);
   margin-top: 10px;
 }
@@ -101,12 +104,11 @@ main {
   height: 24px;
 }
 .nav-list > li > a {
-  font-family: var(--second-family);
+  font-family: var(--second-font);
   font-weight: 400;
   font-size: 15px;
   line-height: 145%;
   color: var(--color-dark-s);
-  letter-spacing: 0.04em;
   text-decoration: none;
 }
 .nav-list > li > hr {
@@ -145,7 +147,6 @@ main {
   font-size: 15px;
   line-height: 160%;
   color: var(--color-dark-l);
-  letter-spacing: 0.04em;
 }
 
 /* hero section style */
@@ -185,7 +186,7 @@ main {
 }
 .btn {
   border-radius: 100px;
-  padding: 15px 45px;
+  padding: 15px 40px;
   width: 207px;
   height: 52px;
   background: var(--color-primary);
@@ -194,7 +195,7 @@ main {
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
 }
 .hero-img {
@@ -344,13 +345,13 @@ color: var(--color-dark-l);
   border: 2px solid var(--color-primary);
   background-color: var(--color-light-s);
   border-radius: 100px;
-  padding: 15px 45px;
+  padding: 14px 40px;
   margin-bottom: 32px;
-  font-family: var(--font-family);
+  font-family: var(--main-font);
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--color-dark-3xl); /* need to add hover and pointer */
 }
 .pets-btn {
@@ -378,7 +379,6 @@ color: var(--color-dark-l);
   flex-wrap: wrap;
   column-gap: 120px;
   row-gap: 55px;
-  
 }
 .icon-container {
   display: flex;
@@ -392,15 +392,11 @@ color: var(--color-dark-l);
   width: 60px;
   height: 60px;
 }
-.h4 {
-  font-family: var(--main-font);
-  font-weight: 400;
-  font-size: 20px;
-  letter-spacing: 0.06em;
-  text-align: center;
-  color: var(--color-dark-l);
-}
+
+/* donation section */
+
 .donation-container {
+  height: 462px;
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -420,6 +416,7 @@ color: var(--color-dark-l);
   margin-top: -10px;
 }
 .donation-h3 {
+
 }
 .h5 {
   font-size: 15px;
@@ -449,4 +446,56 @@ color: var(--color-dark-l);
   font-size: 12px;
   line-height: 150%;
   color: var(--color-dark-m);
+}
+
+/* footer style */
+
+footer {
+  width: 1280px;
+  height: 350px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #5B483A, #262425, #211F20);
+}
+.footer-container {
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 40px;
+  background-image: url("/images/noise_transparent.svg");
+}
+.footer-content-container {
+  width: 302px;
+  height: 234px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.central {
+  margin-right: 25px;
+}
+.footer-h3 {
+  font-size: 35px;
+  color: var(--color-light-xl);
+}
+.footer-h4 {
+  padding-top: 3px;
+  color: var(--color-primary);
+}
+.central-h4 {
+  margin-top: -10px;
+  text-align: start;
+}
+.footer-link {
+  height: 32px;
+  display: flex;
+}
+.footer-icon {
+  margin-right: 20px;
+}
+.footer-img {
+  width: 300px;
+  height: 310px;
+  background-image: url("/images/footer-puppy.png");
 }
