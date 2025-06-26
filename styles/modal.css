@@ -1,0 +1,119 @@
+.modal-window-container {
+  margin: 0 auto;
+  display: none; /* "block" need add JS fun */ 
+  border: none;
+}
+.modal-container {
+  width: 952px;
+  height: 552px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-btn-container {
+  width: 952px;
+  height: 52px;
+  display: flex;
+  justify-content:end;
+  background: none;
+}
+.modal-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid var(--color-primary);
+  margin-right: 9px;
+  background-color: #fff;
+}
+.btn-cross {
+    position: relative;
+    right: 18%;
+    align-content: center;
+}
+.btn-cross::before {
+    content: "";
+    width: 14px;
+    height: 2px;
+    position: absolute;
+    transform: rotate(45deg);
+    background: #000;
+}
+.btn-cross::after {
+    content: "";
+    width: 14px;
+    height: 2px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background: #000;
+}
+.content-container {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  background: none;
+}
+.modal-h3 {
+ font-family: var(--main-font);
+ font-weight: 400;
+ font-size: 35px;
+ line-height: 130%;
+ letter-spacing: 0.06em;
+ color: #000;
+}
+.modal-h4 {
+ font-family: var(--main-font);
+ font-weight: 400;
+ font-size: 20px;
+ line-height: 115%;
+ letter-spacing: 0.06em;
+ color: #000;
+ margin-top: -31px;
+}
+.modal-title {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.modal-list {
+  height: 102px;
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ul ::marker {
+  color: var(--color-primary);
+}
+.modal-list > li {
+  margin-left: 15px;
+}
+.modal-img {
+  width: 500px;
+  height: 500px;
+  background-image: url("/images/pets-jennifer.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 352px;
+  height: 362px;
+  margin-top: 50px;
+  margin-left: 31px;
+}
+.modal-list > li {
+    font-family: var(--main-font);
+font-weight: 400;
+font-size: 15px;
+line-height: 110%;
+letter-spacing: 0.06em;
+color: #000;
+}
+.modal-list > li > span {
+  font-weight: 700;
+}
