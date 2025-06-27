@@ -56,7 +56,7 @@ header, main, footer {
 }
 .header-container, .hero, .about-container 
 .pets-container, .help-container
-.donation-container, .footer-container{
+.donation-container, .footer-container {
   width: 1280px;
   margin: 0 auto;
 }
@@ -131,50 +131,6 @@ main {
   background: var(--color-primary);
   margin-top: 4px;
 }
-/* pets page header styles */
-
-.pets-header {
-  width: 100%;
-  margin: 0 auto;
-  background: var(--color-light-xl);
-}
-.wrapper-pets {
-  width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 120px;
-}
-.pets-logo {
-  font-family: var(--main-font);
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 110%;
-  letter-spacing: 0.06em;
-  color: var(--color-dark-l);
-}
-.pets-logo-title {
-  font-family: var(--second-font);
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  color: var(--color-dark-3xl);
-}
-.pets-nav-links {
-  font-family: var(--second-font);
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: var(--color-dark-l);
-}
-/* .nav-list > li > a > .pets-nav-links::after {
-  content: "";
-  display: none; */ /* "block" need add JS fun */ 
-  /* height: 2px;
-  background: var(--color-primary);
-  margin-top: 4px;
-} */
 
 /* hero section style */
 
@@ -244,7 +200,6 @@ main {
   width: 300px;
   height: 408px;
   margin-bottom: 20px;
-  background-image: url("/images/about-pets.png");
 }
 .about-content {
   width: 430px;
@@ -257,7 +212,7 @@ main {
 .about-heading {
   width: 370px;
 }
-.about-title {
+.about-text {
   font-family: var(--second-font);
   font-weight: 400;
   font-size: 15px;
@@ -270,8 +225,7 @@ main {
 .pets-container {
   display: flex;
   flex-direction: column;
- /*  justify-content: space-around; */
- padding-top: 80px;
+  padding-top: 80px;
   gap: 60px;
   height: 877px;
   background: var(--color-light-l);
@@ -341,28 +295,17 @@ main {
   height: 435px;
   background: var(--color-light-s);
 }
-.card-img1 {
+.card-img {
   width: 270px;
   height: 270px;
-  background-image: url("/images/pets-katrine.png");
-}
-.card-img2 {
-  width: 270px;
-  height: 270px;
-  background-image: url("/images/pets-jennifer.png");
-}
-.card-img3 {
-  width: 270px;
-  height: 270px;
-  background-image: url("/images/pets-woody.png");
 }
 .h4 {
-font-family: var(--main-font);
-font-weight: 400;
-font-size: 20px;
-letter-spacing: 0.06em;
-text-align: center;
-color: var(--color-dark-l);
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark-l);
 }
 .btn-light {
   width: 187px;
@@ -406,12 +349,19 @@ color: var(--color-dark-l);
   column-gap: 120px;
   row-gap: 55px;
 }
-.icon-container {
+.help-icons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: 30px;
+}
+.help-icons figcaption {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark-l);
 }
 .icon {
   text-align: center;
@@ -431,7 +381,6 @@ color: var(--color-dark-l);
 .donation-img {
   width: 505px;
   height: 261px;
-  background-image: url("/images/donation-dog.png");
 }
 .donation-content {
   width: 380px;
@@ -444,7 +393,7 @@ color: var(--color-dark-l);
 .donation-h3 {
 
 }
-.h5 {
+.bank-description {
   font-size: 15px;
   line-height: 110%;
   text-align: start;
@@ -465,7 +414,7 @@ color: var(--color-dark-l);
 .payment-number {
 
 }
-.donation-title {
+.donation-text {
   font-family: var(--second-font);
   font-style: italic;
   font-weight: 400;
@@ -503,11 +452,11 @@ footer {
   font-size: 35px;
   color: var(--color-light-xl);
 }
-.footer-h4 {
+.footer-text {
   padding-top: 3px;
   color: var(--color-primary);
 }
-.central-h4 {
+.footer-central-text {
   margin-top: -10px;
   text-align: start;
 }
@@ -521,5 +470,102 @@ footer {
 .footer-img {
   width: 300px;
   height: 310px;
-  background-image: url("/images/footer-puppy.png");
+}
+
+/* pets page header styles */
+
+.pets-header {
+  width: 100%;
+  height: 120px;
+  margin: 0 auto;
+  background: var(--color-light-xl);
+}
+.wrapper-pets {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+}
+.pets-logo {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.pets-logo-title {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--color-dark-3xl);
+}
+.pets-nav-links {
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-l);
+}
+
+/* pets slider section style */
+
+.pets-background {
+  background: var(--color-light-l);
+}
+.big-pets-container {
+  width: 1280px;
+  height: 1342px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  gap: 60px;
+}
+.pets-card-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
+}
+.pets-btn-container {
+  display: flex;
+  gap: 20px;
+}
+.pets-btn {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 50%;
+  background: var(--color-light-l);
+  cursor: pointer;
+  align-self: center;
+}
+.disabled {
+  border: 2px solid var(--color-dark-s);
+}
+.pets-btn-container button:first-child span {
+  color: var(--color-dark-s);
+}
+.pets-btn-container button:nth-child(2) span {
+  color: var(--color-dark-s);
+}
+.pets-btn span {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark-3xl);
+}
+.counter {
+  background: var(--color-primary);
 }
