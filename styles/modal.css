@@ -123,3 +123,39 @@ color: #000;
 .modal-list > li > span {
   font-weight: 700;
 }
+
+/* Burger icon style */
+
+.header-container > .hidden {
+  display: none;
+}
+.burger-icon-container {
+  position: relative;
+  width: 30px;
+  height: 22px;
+  margin-right: 20px;
+}
+.burger-icon-container span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  background-color: var(--color-primary);
+}
+.burger-icon-container span::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+.burger-icon-container span::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+/* Burger menu style */
