@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96"/>
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg"/>
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png"/>
+  <link rel="manifest" href="/images/favicon/site.webmanifest"/>
   <link rel="stylesheet" href="/styles/main_style.css">
   <link rel="stylesheet" href="/styles/modal.css">
   <title>Shelter</title>
@@ -17,10 +22,10 @@
       </div>
       <nav>
       <ul class="nav-list">
-        <li><a href="#">About the shelter</a></li> <!-- add link -->
+        <li><a href="#about">About the shelter</a></li> <!-- add link -->
         <li><a href="./pets.html">Our pets</a></li>
-        <li><a href="#">Help the shelter</a></li> <!-- add link -->
-        <li><a href="#">Contacts</a></li> <!-- add link -->
+        <li><a href="#help">Help the shelter</a></li> <!-- add link -->
+        <li><a href="#contacts">Contacts</a></li> <!-- add link -->
       </ul>
     </nav>
     </div>
@@ -32,7 +37,7 @@
           puppy with an extremely wide and open heart. He or she will love 
           you more than anybody else in the world, you will see!
         </p>
-        <a href="#" class="btn">Make a friend</a> <!-- add link -->
+        <a href="#pets" class="btn">Make a friend</a> <!-- add link -->
       </div>
       <figure class="hero-img">
         <img src="/images/start-screen-puppy.png" alt="Cute puppy in the shelter">
@@ -41,7 +46,7 @@
     </div>
   </header>
   <main>
-    <section class="about-container">
+    <section class="about-container" id="about">
       <figure class="about-img">
         <img src="/images/about-pets.png" alt="Shelter Cozy House building with animals">
       </figure>
@@ -63,7 +68,7 @@
         </p>
       </div>
     </section>
-    <section class="pets-container">
+    <section class="pets-container" id="pets">
       <h3 class="h3 pets-heading">Our friends who <br>are looking for a house</h3>
       <div class="slider-container">
         <button class="circle-btn left" aria-label="Previous slide"></button>
@@ -92,9 +97,9 @@
         </div>
         <button class="circle-btn right" aria-label="Next slide"></button>
       </div>
-      <a href="#" class="pets-btn btn">Get to know the rest</a> <!-- add link -->
+      <a href="/pets.html" class="main-pets-btn btn">Get to know the rest</a> <!-- add link -->
     </section>
-    <section class="help-container">
+    <section class="help-container" id="help">
       <h3 class="h3 help-heading">How you can help<br> our shelter</h3>
       <ul class="help-icons-container">
         <li>
@@ -158,11 +163,11 @@
         <img src="/images/donation-dog.png" alt="Cute pets neead a donation">
       </figure>
       <div class="donation-content">
-        <h3 class="h3 donation-h3">You can also<br> make a donation</h3>
+        <h3 class="h3">You can also<br> make a donation</h3>
         <span class="h4 bank-description">Name of the bank / Type of bank account</span>
         <a href="#" class="btn payment-container">
           <img src="/images/credit-card.png" alt="credit-card" class="payment-icon">
-          <span class="h4 payment-number">8380 2880 8028 8791 7435</span>
+          <span class="h4">8380 2880 8028 8791 7435</span>
         </a>
         <p class="donation-text">
           Legal information and lorem ipsum dolor 
@@ -175,7 +180,7 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer id="contacts">
     <div class="wrapper">
     <section class="footer-container">
       <div class="footer-content-container">

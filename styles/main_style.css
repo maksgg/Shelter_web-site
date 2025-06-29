@@ -21,6 +21,7 @@
 }
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -33,6 +34,7 @@ h1, h2, h3, h4, h5, p, hr, dialog {
   padding: 0;
 }
 .h3 {
+  user-select: none;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 35px;
@@ -90,6 +92,7 @@ main {
   margin-left: 43px;
 }
 .logo {
+  user-select: none;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 32px;
@@ -99,6 +102,7 @@ main {
   margin-left: -4px;
 }
 .logo_title {
+  user-select: none;
   font-family: var(--second-font);
   font-weight: 400;
   font-size: 13px;
@@ -106,6 +110,7 @@ main {
   color: var(--color-light-xl);
 }
 .nav-list {
+  user-select: none;
   display: flex;
   list-style: none;
   justify-content: space-between;
@@ -123,6 +128,7 @@ main {
   line-height: 145%;
   color: var(--color-dark-s);
   text-decoration: none;
+  transition: all .25s ease-in 0s;
 }
 .nav-list > li > a::after {
   content: "";
@@ -130,6 +136,9 @@ main {
   height: 2px;
   background: var(--color-primary);
   margin-top: 4px;
+}
+.nav-list > li > a:hover {
+  color: var(--color-light-s);
 }
 
 /* hero section style */
@@ -152,6 +161,7 @@ main {
   margin-bottom: 80px;
 }
 .hero-heading {
+  user-select: none;
   width: 310px;
   font-family: var(--main-font);
   font-weight: 400;
@@ -160,6 +170,7 @@ main {
   color: var(--color-light-xl);
 }
 .hero-text {
+  user-select: none;
   font-family: var(--second-font);
   font-weight: 400;
   font-size: 15px;
@@ -167,6 +178,7 @@ main {
   color: var(--color-dark-s);
 }
 .btn {
+  user-select: none;
   border-radius: 100px;
   padding: 15px 40px;
   width: 207px;
@@ -179,6 +191,10 @@ main {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
+  transition: all .25s ease-in 0s;
+}
+.btn:hover {
+  background: var(--color-primary-light);
 }
 .hero-img {
   width: 698px;
@@ -213,6 +229,7 @@ main {
   width: 370px;
 }
 .about-text {
+  user-select: none;
   font-family: var(--second-font);
   font-weight: 400;
   font-size: 15px;
@@ -249,6 +266,11 @@ main {
   background: var(--color-light-l);
   cursor: pointer;
   align-self: center;
+  transition: all .25s ease-in 0s;
+}
+.circle-btn:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);;
 }
 /* arrow line */
 .circle-btn::after {
@@ -294,12 +316,18 @@ main {
   width: 270px;
   height: 435px;
   background: var(--color-light-s);
+  transition: all .25s ease-in 0s;
+}
+.card:hover {
+  background-color: var(--color-light-xl);
+  scale: 1.05;
 }
 .card-img {
   width: 270px;
   height: 270px;
 }
 .h4 {
+  user-select: none;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 20px;
@@ -308,6 +336,7 @@ main {
   color: var(--color-dark-l);
 }
 .btn-light {
+  user-select: none;
   width: 187px;
   height: 52px;
   text-align: center;
@@ -321,9 +350,15 @@ main {
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
-  color: var(--color-dark-3xl); /* need to add hover and pointer */
+  color: var(--color-dark-3xl);
+  transition: all .25s ease-in 0s;
 }
-.pets-btn {
+.card:hover .btn-light {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  cursor: pointer;
+}
+.main-pets-btn {
   align-self: center;
   width: 261px;
 }
@@ -356,6 +391,7 @@ main {
   gap: 30px;
 }
 .help-icons figcaption {
+  user-select: none;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 20px;
@@ -377,6 +413,7 @@ main {
   justify-content: center;
   gap: 30px;
   padding-top: 90px;
+  background: var(--color-light-l);
 }
 .donation-img {
   width: 505px;
@@ -389,9 +426,6 @@ main {
   flex-direction: column;
   justify-content: space-between;
   margin-top: -10px;
-}
-.donation-h3 {
-
 }
 .bank-description {
   font-size: 15px;
@@ -411,10 +445,8 @@ main {
   width: 30px;
   height: 23px;
 }
-.payment-number {
-
-}
 .donation-text {
+  user-select: none;
   font-family: var(--second-font);
   font-style: italic;
   font-weight: 400;
@@ -489,6 +521,7 @@ footer {
   height: 120px;
 }
 .pets-logo {
+  text-decoration: none;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 32px;
@@ -509,6 +542,10 @@ footer {
   font-size: 15px;
   line-height: 160%;
   color: var(--color-dark-l);
+  transition: all .25s ease-in 0s;
+}
+.nav-list > li > .pets-nav-links:hover {
+  color: var(--color-dark-3xl);
 }
 
 /* pets slider section style */
@@ -535,8 +572,13 @@ footer {
   grid-row-gap: 30px;
 }
 .pets-btn-container {
+  user-select: none;
   display: flex;
   gap: 20px;
+}
+.pets-btn:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
 }
 .pets-btn {
   position: relative;
@@ -547,9 +589,15 @@ footer {
   background: var(--color-light-l);
   cursor: pointer;
   align-self: center;
+  transition: all .25s ease-in 0s;
 }
 .disabled {
   border: 2px solid var(--color-dark-s);
+}
+.disabled:hover {
+  background: var(--color-light-l);
+  border-color: var(--color-dark-s);
+  cursor: auto;
 }
 .pets-btn-container button:first-child span {
   color: var(--color-dark-s);
