@@ -1,6 +1,6 @@
 .modal-window-container {
   margin: 0 auto;
-  display: none; /* "block" need add JS fun */ 
+  display: block; /* "block" need add JS fun */ 
   border: none;
 }
 .modal-container {
@@ -23,6 +23,12 @@
   border: 2px solid var(--color-primary);
   margin-right: 9px;
   background-color: #fff;
+  transition: all .25s ease-in 0s;
+  cursor: pointer;
+}
+.modal-btn:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
 }
 .btn-cross {
     position: relative;
