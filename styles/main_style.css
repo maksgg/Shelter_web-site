@@ -63,7 +63,7 @@ header, main, footer {
 }
 .wrapper {
   width: 100%;
-  background-image: url("/images/noise_transparent.svg");
+  background-image: url("./images/noise_transparent.svg");
 }
 
 /* header section */

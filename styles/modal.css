@@ -98,7 +98,7 @@ ul ::marker {
 .modal-img {
   width: 500px;
   height: 500px;
-  background-image: url("/images/pets-jennifer.png");
+  background-image: url("../images/pets-jennifer.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #fff;
@@ -126,7 +126,8 @@ ul ::marker {
 
 /* Burger icon style */
 
-.header-container > .hidden {
+.header-container > .hidden,
+.wrapper-pets > .hidden {
   display: none;
 }
 .burger-icon-container {
