@@ -36,20 +36,20 @@
     align-content: center;
 }
 .btn-cross::before {
-    content: "";
-    width: 14px;
-    height: 2px;
-    position: absolute;
-    transform: rotate(45deg);
-    background: #000;
+  content: "";
+  width: 14px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(45deg);
+  background: #000;
 }
 .btn-cross::after {
-    content: "";
-    width: 14px;
-    height: 2px;
-    position: absolute;
-    transform: rotate(-45deg);
-    background: #000;
+  content: "";
+  width: 14px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background: #000;
 }
 .content-container {
   width: 900px;
@@ -58,21 +58,21 @@
   background: none;
 }
 .modal-h3 {
- font-family: var(--main-font);
- font-weight: 400;
- font-size: 35px;
- line-height: 130%;
- letter-spacing: 0.06em;
- color: #000;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #000;
 }
 .modal-h4 {
- font-family: var(--main-font);
- font-weight: 400;
- font-size: 20px;
- line-height: 115%;
- letter-spacing: 0.06em;
- color: #000;
- margin-top: -31px;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000;
+  margin-top: -31px;
 }
 .modal-text {
   font-family: var(--main-font);
@@ -113,12 +113,12 @@ ul ::marker {
   margin-left: 31px;
 }
 .modal-list > li {
-    font-family: var(--main-font);
-font-weight: 400;
-font-size: 15px;
-line-height: 110%;
-letter-spacing: 0.06em;
-color: #000;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000;
 }
 .modal-list > li > span {
   font-weight: 700;
@@ -131,9 +131,12 @@ color: #000;
 }
 .burger-icon-container {
   position: relative;
+  z-index: 10;
   width: 30px;
   height: 22px;
   margin-right: 20px;
+  cursor: pointer;
+  transition: all .4s ease-in;
 }
 .burger-icon-container span {
   width: 30px;
@@ -158,4 +161,9 @@ color: #000;
   height: 2px;
   background-color: var(--color-primary);
 }
-/* Burger menu style */
+.burger-icon-container.rotate {
+  transform: rotate(90deg);
+}
+.scroll-stop {
+  overflow: hidden;
+}

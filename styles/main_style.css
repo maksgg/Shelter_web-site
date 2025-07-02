@@ -615,3 +615,6 @@ footer {
 .counter {
   background: var(--color-primary);
 }
+.menu.active {
+  transform: translateX(0);
+}
