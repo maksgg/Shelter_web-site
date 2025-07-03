@@ -63,7 +63,7 @@ header, main, footer {
 }
 .wrapper {
   width: 100%;
-  background-image: url("./images/noise_transparent.svg");
+  background-image: url("../images/noise_transparent.png");
 }
 
 /* header section */
@@ -617,4 +617,21 @@ footer {
 }
 .menu.active {
   transform: translateX(0);
+}
+.color-body-cover {
+  position: relative;
+  overflow: hidden;
+}
+.color-body-cover::before {
+  content: '';
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+body {
+  z-index: -1;
 }
