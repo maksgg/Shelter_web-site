@@ -61,7 +61,7 @@ function addCardToSlider(cardData, defaultVisibleCards = cardData.length) {
   })
   return;
 }
-fetch('../cardData.json')
+fetch('./cardData.json')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
