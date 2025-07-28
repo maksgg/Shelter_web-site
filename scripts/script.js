@@ -1,5 +1,4 @@
 "use strict"
-console.log("hello")
 const burgerBtn = document.querySelector(".burger-icon-container");
 const burgerMenu = document.querySelector(".menu");
 const links = document.querySelectorAll('.nav-list > li');
