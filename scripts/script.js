@@ -34,7 +34,14 @@ document.addEventListener('click', (e) => {
 }
 clickEvents();
 
-function addCardToSlider(cardData, defaultVisibleCards = cardData.length) {
+function visibleCards() {
+  const width = window.innerWidth;
+  if(width > 1200) return 3;
+  if(width > 600) return 2;
+  return 1;
+}
+
+function addCardsToSlider(cardData, defaultVisibleCards = cardData.length) {
   const sliderContainer = document.querySelector('.card-container');
   cardData.forEach((e, index) => {
   const cardContainer = document.createElement('article');
@@ -59,8 +66,36 @@ function addCardToSlider(cardData, defaultVisibleCards = cardData.length) {
   }
   sliderContainer.appendChild(cardContainer);
   })
+
+   // arrows click function
+  const arrowBtnRight = document.querySelector(".circle-btn.right");
+  const arrowBtnLeft = document.querySelector(".circle-btn.left");
+  const cards = Array.from(document.querySelectorAll(".card")); // get NodeListArr
+
+  let cardsIndexes = cards.map((_, i) => i); // create arr with indexes of NodeListArr
+  let lastShownIndexes = [];
+
+  const randomCardsGenerate = (count) => {
+    const availableCards = cardsIndexes.filter(i => !lastShownIndexes.includes(i));
+    const mixCards = availableCards.sort(() => Math.random() - 0.5);
+    const nextThree = mixCards.slice(0 , count); // "count" is the quantity of cards depends on screen size
+    
+    lastShownIndexes = nextThree;
+    return nextThree.map(i => cards[i])
+  }
+  const shownNextCards = () => {
+    let count = visibleCards(); // set the quantity of cards depends on the screen width
+    cards.forEach(card => card.style.display = "none");
+    let shownNextCards = randomCardsGenerate(count);
+    shownNextCards.forEach(card => card.style.display = "flex")
+  }
+
+  arrowBtnRight.addEventListener("click", shownNextCards);
+  arrowBtnLeft.addEventListener("click", shownNextCards);
+
   return;
 }
+
 fetch('./cardData.json')
   .then(response => {
     if (!response.ok) {
@@ -70,29 +105,20 @@ fetch('./cardData.json')
   })
   .then(data => {
     // render 3 cards
-    addCardToSlider(data, 3);
+    addCardsToSlider(data, 3);
+    
+    const cards = document.querySelectorAll('.card');
 
-    // responsive setenings
     function responsiveVisableCards() {
-      const cards = document.querySelectorAll('.card');
-      const width = window.innerWidth;
-      let visibleCards;
-      if (width > 1200) {
-        visibleCards = 3;
-      } else if (width > 600) {
-        visibleCards = 2;
-      } else {
-        visibleCards = 1;
-      }
-
+      const visible = visibleCards();
       cards.forEach((e, i) => {
-        e.style.display = (i < visibleCards) ? 'flex' : 'none';
+        e.style.display = (i < visible) ? 'flex' : 'none';
       });
     }
-
-    responsiveVisableCards();
-    window.addEventListener('resize', responsiveVisableCards);
+    
+    responsiveVisableCards(cards);
+    window.addEventListener('resize', () => responsiveVisableCards(cards),);
   })
   .catch(error => {
     console.error('JSON upload error:', error);
-  });
+});

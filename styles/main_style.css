@@ -127,7 +127,7 @@ main {
   line-height: 145%;
   color: var(--color-dark-s);
   text-decoration: none;
-  transition: all .25s ease-in 0s;
+  /* transition: all .25s ease-in 0s; */
 }
 .nav-list > li > a::after {
   content: "";
@@ -617,6 +617,7 @@ footer {
 }
 .menu.active {
   transform: translateX(0);
+  transition: all .4s ease-in 0s;
 }
 .color-body-cover {
   position: relative;
