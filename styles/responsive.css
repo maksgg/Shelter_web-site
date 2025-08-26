@@ -9,7 +9,7 @@
   .pets-container, .help-container,
   .donation-container, .footer-container,
   .pets-header, .wrapper-pets {
-    width: 100%;
+   max-width: 100%;
   }
   .hero-img {
       align-content: end;

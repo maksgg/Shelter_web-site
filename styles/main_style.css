@@ -25,6 +25,7 @@ html {
 }
 body {
   margin: 0;
+  z-index: -1;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -94,7 +95,7 @@ main {
   user-select: none;
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 110%;
   letter-spacing: 0.06em;
   color: var(--color-primary);
@@ -186,7 +187,7 @@ main {
   text-align: center;
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
@@ -345,7 +346,7 @@ main {
   margin-bottom: 32px;
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
@@ -634,5 +635,5 @@ footer {
   z-index: 1;
 }
 body {
-  z-index: -1;
+
 }
