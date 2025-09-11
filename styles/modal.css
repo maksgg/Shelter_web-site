@@ -77,9 +77,9 @@
 .modal-h4 {
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 115%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: #000;
   margin-top: -31px;
 }
@@ -122,7 +122,7 @@ ul ::marker {
   margin-top: 50px;
   margin-left: 31px;
 }
-.modal-list > li {
+.modal-list >li> span {
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 15px;
@@ -130,7 +130,7 @@ ul ::marker {
   letter-spacing: 0.06em;
   color: #000;
 }
-.modal-list > li > span {
+.modal-list > li {
   font-weight: 700;
 }
 
