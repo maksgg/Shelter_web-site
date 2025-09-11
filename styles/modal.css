@@ -1,7 +1,16 @@
 .modal-window-container {
+  position: fixed;
+  top: 15%;
+  left: 0;
   margin: 0 auto;
-  display: block; /* "block" need add JS fun */ 
+  display: block; 
   border: none;
+  z-index: 2;
+  border-radius: 25px;
+  box-shadow: 21px 22px 35px 0px rgba(60, 48, 38, 0.3);
+}
+.hidden-dialog {
+  display: none;
 }
 .modal-container {
   width: 952px;
@@ -68,9 +77,9 @@
 .modal-h4 {
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 115%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: #000;
   margin-top: -31px;
 }
@@ -98,10 +107,11 @@ ul ::marker {
 .modal-img {
   width: 500px;
   height: 500px;
-  background-image: url("../images/pets-jennifer.png");
+/*   background-image: url("../images/pets-jennifer.png"); */
   background-repeat: no-repeat;
   background-size: contain;
   background-color: #fff;
+  border-radius: 25px;
 }
 .modal-content {
   display: flex;
@@ -112,7 +122,7 @@ ul ::marker {
   margin-top: 50px;
   margin-left: 31px;
 }
-.modal-list > li {
+.modal-list >li> span {
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 15px;
@@ -120,7 +130,7 @@ ul ::marker {
   letter-spacing: 0.06em;
   color: #000;
 }
-.modal-list > li > span {
+.modal-list > li {
   font-weight: 700;
 }
 
