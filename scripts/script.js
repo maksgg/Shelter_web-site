@@ -73,12 +73,13 @@ function addCardsToSlider(cardData, defaultVisibleCards = cardData.length) {
   const cards = Array.from(document.querySelectorAll(".card")); // get NodeListArr
 
   let cardsIndexes = cards.map((_, i) => i); // create arr with indexes of NodeListArr
-  let lastShownIndexes = [];
+  let lastShownIndexes = [0, 1, 2];
 
   const randomCardsGenerate = (count) => {
     const availableCards = cardsIndexes.filter(i => !lastShownIndexes.includes(i));
     const mixCards = availableCards.sort(() => Math.random() - 0.5);
     const nextThree = mixCards.slice(0 , count); // "count" is the quantity of cards depends on screen size
+    console.log(nextThree)
     
     lastShownIndexes = nextThree;
     return nextThree.map(i => cards[i])
@@ -106,7 +107,7 @@ fetch('./cardData.json')
   .then(data => {
     // render 3 cards
     addCardsToSlider(data, 3);
-    
+
     const cards = document.querySelectorAll('.card');
 
     function responsiveVisableCards() {
@@ -115,7 +116,7 @@ fetch('./cardData.json')
         e.style.display = (i < visible) ? 'flex' : 'none';
       });
     }
-    
+
     responsiveVisableCards(cards);
     window.addEventListener('resize', () => responsiveVisableCards(cards),);
   })
