@@ -5,8 +5,10 @@ const links = document.querySelectorAll('.nav-list > li');
 const body = document.body;
 const dialogWindow = document.querySelector('.modal-window-container.hidden-dialog');
 const closeModalBtn = document.querySelector('.modal-btn');
-const indexHtml = '/index.html';
-const petsHtml = '/pets.html';
+const indexHtml = '/index.html'; // for local server
+const petsHtml = '/pets.html';  // for local server
+const mainPathName = '/Shelter_web-site/';
+const petsPathName = '/Shelter_web-site/pets.html';
 
 function clickEvents() {
   burgerBtn.addEventListener('click', () => {
@@ -162,14 +164,14 @@ fetch('./cardData.json')
 
    
 
-    if(window.location.pathname === indexHtml) {
+    if(window.location.pathname === indexHtml || window.location.pathname === mainPathName) {
       sliderContainerMainPage.innerHTML = "";
       console.log(true)
       createCard(data, sliderContainerMainPage, visibleCards());
       arrowsClickOnMainPage();
       window.addEventListener('resize', () => responsiveVisibleCards());
     }
-    if(window.location.pathname === petsHtml) {
+    if(window.location.pathname === petsHtml || window.location.pathname === petsPathName) {
       // sliderContainerPetsPage.innerHTML = "";
       // console.log(true)
       createCard(data, sliderContainerPetsPage, visibleCardsOnPetsPage());
